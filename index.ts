@@ -4,7 +4,10 @@ import Redis from 'ioredis';
 const app = express();
 const PORT = process.env.PORT || 3070;
 
-const redisClient = new Redis();
+const redisClient = new Redis({
+	port: 6379,
+	host: 'redis-bun',
+});
 
 redisClient.on('error', (err: Error) => {
 	console.error('Redis error:', err);
