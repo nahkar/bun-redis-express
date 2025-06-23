@@ -2,7 +2,7 @@ import express, { type Request, type Response } from 'express';
 import Redis from 'ioredis';
 
 const app = express();
-const PORT = process.env.PORT || 3090;
+const PORT = process.env.PORT || 3070;
 
 const redisClient = new Redis();
 
