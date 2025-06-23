@@ -2,12 +2,14 @@ version: '3.8'
 
 services:
   app-bun:
+    container_name: app-bun
     build: .
     ports:
       - "3070:3070"
     depends_on:
       - redis-bun
   redis-bun:
+    container_name: redis-bun
     image: "redis:alpine"
     ports:
       - "6379:6379"
