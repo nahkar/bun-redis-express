@@ -3,9 +3,11 @@ version: '3.8'
 services:
   app-bun:
     container_name: app-bun
-    build: .
+    image: "app-bun"
+    restart: always
     ports:
       - "3070:3070"
+    build: .
     depends_on:
       - redis-bun
   redis-bun:
