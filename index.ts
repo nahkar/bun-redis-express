@@ -36,6 +36,10 @@ app.get('/inc', async (req: Request, res: Response) => {
 	}
 });
 
+app.get('/crash', () => {
+	process.exit(1);
+});
+
 app.listen(PORT, () => {
 	console.log('Connected to Redis');
 	console.log(`Server is running on port ${PORT}`);
